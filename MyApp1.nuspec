@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+	    <id>$id$</id>
+	    <version>$version$</version>
+	    <title>$title$</title>
+	    <authors>$author$</authors>
+	    <owners>$author$</owners>
+	    <description>$description$</description>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    </metadata>
+    <files>
+        <file src="bin\Release\DeltaCompressionDotNet.dll" target="lib\net45\DeltaCompressionDotNet.dll" />
+        <file src="bin\Release\DeltaCompressionDotNet.MsDelta.dll" target="lib\net45\DeltaCompressionDotNet.MsDelta.dll" />
+        <file src="bin\Release\DeltaCompressionDotNet.PatchApi.dll" target="lib\net45\DeltaCompressionDotNet.PatchApi.dll" />
+        <file src="bin\Release\ICSharpCode.SharpZipLib.dll" target="lib\net45\ICSharpCode.SharpZipLib.dll" />
+        <file src="bin\Release\ICSharpCode.SharpZipLib.xml" target="lib\net45\ICSharpCode.SharpZipLib.xml" />
+        <file src="bin\Release\Mono.Cecil.dll" target="lib\net45\Mono.Cecil.dll" />
+        <file src="bin\Release\Mono.Cecil.Mdb.dll" target="lib\net45\Mono.Cecil.Mdb.dll" />
+        <file src="bin\Release\Mono.Cecil.Pdb.dll" target="lib\net45\Mono.Cecil.Pdb.dll" />
+        <file src="bin\Release\Mono.Cecil.Rocks.dll" target="lib\net45\Mono.Cecil.Rocks.dll" />
+        <file src="bin\Release\MyApp.exe" target="lib\net45\MyApp.exe" />
+        <file src="bin\Release\MyApp.exe.config" target="lib\net45\MyApp.exe.config" />
+        <file src="bin\Release\NuGet.Squirrel.dll" target="lib\net45\NuGet.Squirrel.dll" />
+        <file src="bin\Release\Splat.dll" target="lib\net45\Splat.dll" />
+        <file src="bin\Release\Squirrel.dll" target="lib\net45\Squirrel.dll" />
+    </files>
+</package>

@@ -103,7 +103,12 @@
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
-  <Target Name="AfterBuild">
+	  -->
+  <Target Name="AfterBuild" Condition=" '$(Configuration)' == 'Release'">
+		<GetAssemblyIdentity AssemblyFiles="$(TargetPath)">
+			<Output TaskParameter="Assemblies" ItemName="myAssemblyInfo"/>
+		</GetAssemblyIdentity>
+		<Exec Command="nuget pack MyApp.nuspec -Version %(myAssemblyInfo.Version) -Properties Configuration=Release -OutputDirectory bin\Release -BasePath bin\Release" />
+		<Exec Command="squirrel --no-msi --releasify bin\Release\MyApp.%(myAssemblyInfo.Version).nupkg" />
   </Target>
-  -->
 </Project>

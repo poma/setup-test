@@ -15,8 +15,8 @@ namespace MyApp
         [STAThread]
         static void Main()
         {
-			using (var mgr = new UpdateManager(@"C:\Dev\setup-test\Releases")) {
-				mgr.UpdateApp();
+			using (var mgr = UpdateManager.GitHubUpdateManager("https://github.com/poma/setup-test")) {
+				mgr.Result.UpdateApp();
 			}
 
 			Application.EnableVisualStyles();
