@@ -108,7 +108,7 @@
 		<GetAssemblyIdentity AssemblyFiles="$(TargetPath)">
 			<Output TaskParameter="Assemblies" ItemName="myAssemblyInfo"/>
 		</GetAssemblyIdentity>
-		<Exec Command="nuget pack MyApp.nuspec -Version %(myAssemblyInfo.Version) -Properties Configuration=Release -OutputDirectory bin\Release -BasePath bin\Release" />
-		<Exec Command="squirrel --no-msi --releasify bin\Release\MyApp.%(myAssemblyInfo.Version).nupkg" />
+		<Exec Command="nuget pack MyApp.nuspec -Version %(myAssemblyInfo.Version) -Properties Configuration=Release -OutputDirectory $(OutDir) -BasePath $(OutDir)" />
+		<Exec Command="squirrel --no-msi --releasify $(OutDir)MyApp.%(myAssemblyInfo.Version).nupkg" />
   </Target>
 </Project>

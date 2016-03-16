@@ -2,17 +2,15 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>MyApp</id>
-    <version>1.0.0.0</version>
-    <title>titl</title>
-    <authors>qwe</authors>
-	<description>asd</description>
+    <version>0.0.0.0</version>
+    <title>title</title>
+    <authors>authors</authors>
+	<description>description</description>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <copyright>Copyright 2016</copyright>
     <dependencies />
   </metadata>
   <files>
-		<file src="*.dll" target="lib\net45\" />
-		<file src="MyApp.exe" target="lib\net45\" />
-		<file src="MyApp.exe.config" target="lib\net45\" />
+    <file src="*.*" target="lib\net45\" exclude="*.pdb;*.nupkg;*.vshost.*"/>
   </files>
 </package>
