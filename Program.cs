@@ -15,7 +15,7 @@ namespace MyApp
         [STAThread]
         static void Main()
         {
-			using (var mgr = UpdateManager.GitHubUpdateManager("https://github.com/poma/setup-test")) {
+			using (var mgr = UpdateManager.GitHubUpdateManager("https://github.com/poma/setup-test", prerelease: true)) {
 				mgr.Result.UpdateApp();
 			}
 
