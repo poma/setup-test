@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Squirrel;
 
 namespace MyApp
 {
@@ -14,7 +15,11 @@ namespace MyApp
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
+			using (var mgr = new UpdateManager(@"C:\Dev\setup-test\Releases")) {
+				mgr.UpdateApp();
+			}
+
+			Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
