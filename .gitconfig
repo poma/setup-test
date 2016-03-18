@@ -1,0 +1,6 @@
+[filter "tabspace4"]
+    smudge = C:\Users\Poma\Apps\cygwin\bin\unexpand --tabs=4 --first-only
+    clean = C:\Users\Poma\Apps\cygwin\bin\expand --tabs=4 --initial
+[filter "tabspace2"]
+    smudge = C:\Users\Poma\Apps\cygwin\bin\unexpand --tabs=2 --first-only
+    clean = C:\Users\Poma\Apps\cygwin\bin\expand --tabs=2 --initial
